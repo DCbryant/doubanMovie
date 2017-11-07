@@ -34,7 +34,7 @@ const top250 = {
         self.isLoading = true
         self.$ele.find('.loading').show()
         $.ajax({
-            url: 'http://api.douban.com/v2/movie/top250',
+            url: '//api.douban.com/v2/movie/top250',
             data: {
                 start: self.index || 0
             },
@@ -111,7 +111,7 @@ const usBox = {
         let self = this
         self.$ele.find('.loading').show()
         $.ajax({
-            url: 'http://api.douban.com/v2/movie/us_box',
+            url: '//api.douban.com/v2/movie/us_box',
             dataType: 'jsonp'
         }).done(function(result){
             callback&&callback(result)
@@ -191,7 +191,7 @@ const search = {
         let self = this
         self.$ele.find('.loading').show()
         $.ajax({
-            url: 'http://api.douban.com/v2/movie/search',
+            url: '//api.douban.com/v2/movie/search',
             data: {
                 q:self.keyword
             },
